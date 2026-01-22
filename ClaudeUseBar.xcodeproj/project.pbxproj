@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000001000000000000001 /* ClaudeUseBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000001 /* ClaudeUseBarApp.swift */; };
+		A1000001000000000000002 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000002 /* Account.swift */; };
+		A1000001000000000000003 /* OAuthAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000003 /* OAuthAccount.swift */; };
+		A1000001000000000000004 /* ClaudeCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000004 /* ClaudeCredentials.swift */; };
+		A1000001000000000000005 /* UsageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000005 /* UsageResponse.swift */; };
+		A1000001000000000000006 /* AccountUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000006 /* AccountUsage.swift */; };
+		A1000001000000000000007 /* ClaudeInstall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000007 /* ClaudeInstall.swift */; };
+		A1000001000000000000008 /* ClaudeConfigStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000008 /* ClaudeConfigStore.swift */; };
+		A1000001000000000000009 /* ClaudeKeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000009 /* ClaudeKeychainStore.swift */; };
+		A1000001000000000000010 /* AppKeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000010 /* AppKeychainStore.swift */; };
+		A1000001000000000000011 /* AppAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000011 /* AppAccountStore.swift */; };
+		A1000001000000000000012 /* AnthropicUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000012 /* AnthropicUsageClient.swift */; };
+		A1000001000000000000013 /* AccountSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000013 /* AccountSwitcher.swift */; };
+		A1000001000000000000014 /* UsageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000014 /* UsageViewModel.swift */; };
+		A1000001000000000000015 /* AddAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000015 /* AddAccountViewModel.swift */; };
+		A1000001000000000000016 /* MenuBarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000016 /* MenuBarLabel.swift */; };
+		A1000001000000000000017 /* PopoverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000017 /* PopoverContentView.swift */; };
+		A1000001000000000000018 /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000018 /* AccountRowView.swift */; };
+		A1000001000000000000019 /* UsageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000019 /* UsageProgressView.swift */; };
+		A1000001000000000000020 /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000020 /* AddAccountView.swift */; };
+		A1000001000000000000021 /* ProcessDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000021 /* ProcessDetector.swift */; };
+		A1000001000000000000022 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000022 /* TimeFormatter.swift */; };
+		A1000001000000000000023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000023 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000001000000000000001 /* ClaudeUseBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeUseBarApp.swift; sourceTree = "<group>"; };
+		A2000001000000000000002 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		A2000001000000000000003 /* OAuthAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAccount.swift; sourceTree = "<group>"; };
+		A2000001000000000000004 /* ClaudeCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeCredentials.swift; sourceTree = "<group>"; };
+		A2000001000000000000005 /* UsageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageResponse.swift; sourceTree = "<group>"; };
+		A2000001000000000000006 /* AccountUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUsage.swift; sourceTree = "<group>"; };
+		A2000001000000000000007 /* ClaudeInstall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeInstall.swift; sourceTree = "<group>"; };
+		A2000001000000000000008 /* ClaudeConfigStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeConfigStore.swift; sourceTree = "<group>"; };
+		A2000001000000000000009 /* ClaudeKeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeKeychainStore.swift; sourceTree = "<group>"; };
+		A2000001000000000000010 /* AppKeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeychainStore.swift; sourceTree = "<group>"; };
+		A2000001000000000000011 /* AppAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAccountStore.swift; sourceTree = "<group>"; };
+		A2000001000000000000012 /* AnthropicUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnthropicUsageClient.swift; sourceTree = "<group>"; };
+		A2000001000000000000013 /* AccountSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSwitcher.swift; sourceTree = "<group>"; };
+		A2000001000000000000014 /* UsageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewModel.swift; sourceTree = "<group>"; };
+		A2000001000000000000015 /* AddAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewModel.swift; sourceTree = "<group>"; };
+		A2000001000000000000016 /* MenuBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarLabel.swift; sourceTree = "<group>"; };
+		A2000001000000000000017 /* PopoverContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverContentView.swift; sourceTree = "<group>"; };
+		A2000001000000000000018 /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
+		A2000001000000000000019 /* UsageProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageProgressView.swift; sourceTree = "<group>"; };
+		A2000001000000000000020 /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
+		A2000001000000000000021 /* ProcessDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetector.swift; sourceTree = "<group>"; };
+		A2000001000000000000022 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		A2000001000000000000023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000001000000000000024 /* ClaudeUseBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClaudeUseBar.entitlements; sourceTree = "<group>"; };
+		A2000001000000000000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3000001000000000000001 /* ClaudeUseBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaudeUseBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4000001000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5000001000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A5000001000000000000002 /* ClaudeUseBar */,
+				A5000001000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5000001000000000000002 /* ClaudeUseBar */ = {
+			isa = PBXGroup;
+			children = (
+				A5000001000000000000004 /* App */,
+				A5000001000000000000005 /* Models */,
+				A5000001000000000000006 /* Services */,
+				A5000001000000000000011 /* ViewModels */,
+				A5000001000000000000012 /* Views */,
+				A5000001000000000000013 /* Utilities */,
+				A2000001000000000000023 /* Assets.xcassets */,
+				A2000001000000000000024 /* ClaudeUseBar.entitlements */,
+				A2000001000000000000025 /* Info.plist */,
+			);
+			path = ClaudeUseBar;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3000001000000000000001 /* ClaudeUseBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000001 /* ClaudeUseBarApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000002 /* Account.swift */,
+				A2000001000000000000003 /* OAuthAccount.swift */,
+				A2000001000000000000004 /* ClaudeCredentials.swift */,
+				A2000001000000000000005 /* UsageResponse.swift */,
+				A2000001000000000000006 /* AccountUsage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A5000001000000000000007 /* Claude */,
+				A5000001000000000000008 /* Storage */,
+				A5000001000000000000009 /* Network */,
+				A2000001000000000000013 /* AccountSwitcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000007 /* Claude */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000007 /* ClaudeInstall.swift */,
+				A2000001000000000000008 /* ClaudeConfigStore.swift */,
+				A2000001000000000000009 /* ClaudeKeychainStore.swift */,
+			);
+			path = Claude;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000008 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000010 /* AppKeychainStore.swift */,
+				A2000001000000000000011 /* AppAccountStore.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000009 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000012 /* AnthropicUsageClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000011 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000014 /* UsageViewModel.swift */,
+				A2000001000000000000015 /* AddAccountViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000012 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000016 /* MenuBarLabel.swift */,
+				A2000001000000000000017 /* PopoverContentView.swift */,
+				A2000001000000000000018 /* AccountRowView.swift */,
+				A2000001000000000000019 /* UsageProgressView.swift */,
+				A2000001000000000000020 /* AddAccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000013 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001000000000000021 /* ProcessDetector.swift */,
+				A2000001000000000000022 /* TimeFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6000001000000000000001 /* ClaudeUseBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7000001000000000000001 /* Build configuration list for PBXNativeTarget "ClaudeUseBar" */;
+			buildPhases = (
+				A8000001000000000000001 /* Sources */,
+				A4000001000000000000001 /* Frameworks */,
+				A9000001000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClaudeUseBar;
+			productName = ClaudeUseBar;
+			productReference = A3000001000000000000001 /* ClaudeUseBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB000001000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A6000001000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AB000001000000000000002 /* Build configuration list for PBXProject "ClaudeUseBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5000001000000000000001;
+			productRefGroup = A5000001000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6000001000000000000001 /* ClaudeUseBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9000001000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001000000000000023 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8000001000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001000000000000001 /* ClaudeUseBarApp.swift in Sources */,
+				A1000001000000000000002 /* Account.swift in Sources */,
+				A1000001000000000000003 /* OAuthAccount.swift in Sources */,
+				A1000001000000000000004 /* ClaudeCredentials.swift in Sources */,
+				A1000001000000000000005 /* UsageResponse.swift in Sources */,
+				A1000001000000000000006 /* AccountUsage.swift in Sources */,
+				A1000001000000000000007 /* ClaudeInstall.swift in Sources */,
+				A1000001000000000000008 /* ClaudeConfigStore.swift in Sources */,
+				A1000001000000000000009 /* ClaudeKeychainStore.swift in Sources */,
+				A1000001000000000000010 /* AppKeychainStore.swift in Sources */,
+				A1000001000000000000011 /* AppAccountStore.swift in Sources */,
+				A1000001000000000000012 /* AnthropicUsageClient.swift in Sources */,
+				A1000001000000000000013 /* AccountSwitcher.swift in Sources */,
+				A1000001000000000000014 /* UsageViewModel.swift in Sources */,
+				A1000001000000000000015 /* AddAccountViewModel.swift in Sources */,
+				A1000001000000000000016 /* MenuBarLabel.swift in Sources */,
+				A1000001000000000000017 /* PopoverContentView.swift in Sources */,
+				A1000001000000000000018 /* AccountRowView.swift in Sources */,
+				A1000001000000000000019 /* UsageProgressView.swift in Sources */,
+				A1000001000000000000020 /* AddAccountView.swift in Sources */,
+				A1000001000000000000021 /* ProcessDetector.swift in Sources */,
+				A1000001000000000000022 /* TimeFormatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AC000001000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC000001000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AC000001000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClaudeUseBar/ClaudeUseBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClaudeUseBar/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Claude UseBar";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 João Alves. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joaoalves.claudeusebar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AC000001000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClaudeUseBar/ClaudeUseBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClaudeUseBar/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Claude UseBar";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 João Alves. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joaoalves.claudeusebar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7000001000000000000001 /* Build configuration list for PBXNativeTarget "ClaudeUseBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC000001000000000000003 /* Debug */,
+				AC000001000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB000001000000000000002 /* Build configuration list for PBXProject "ClaudeUseBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC000001000000000000001 /* Debug */,
+				AC000001000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB000001000000000000001 /* Project object */;
+}
