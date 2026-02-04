@@ -1,189 +1,218 @@
-# Claude UseBar
+# 📊 Claude UseBar
 
-App de menu bar para macOS que monitora o uso do Claude Code e permite gerenciar múltiplas contas.
+macOS menu bar app that monitors Claude Code usage and lets you manage multiple accounts with safe, automatic switching.
 
-## Funcionalidades
+## ✨ Features
 
-- 📊 **Monitoramento em Tempo Real**: Exibe utilização do limite de 5 horas na status bar
-- 👥 **Múltiplas Contas**: Gerencie e alterne entre várias contas do Claude Code
-- 🔄 **Troca Segura**: Sistema de rollback automático em caso de falha
-- 💾 **Cache Inteligente**: Cache de 60s com polling a cada 45s
-- 🎨 **Visual Moderno**: Interface com Liquid Glass (macOS 26+) e fallback para versões anteriores
+- 📊 **Real-Time Monitoring** — Displays 5-hour usage limit right in the status bar
+- 👥 **Multiple Accounts** — Manage and switch between multiple Claude Code accounts
+- 🔄 **Safe Switching** — Automatic rollback system in case of failure
+- 💾 **Smart Caching** — 60s cache with 45s polling to avoid unnecessary requests
+- 🎨 **Modern UI** — Liquid Glass interface (macOS 26+) with fallback for older versions
+- 🔐 **Secure** — Credentials stored in the macOS Keychain
 
-## Requisitos
+## 📋 Requirements
 
-- macOS 14.0 ou superior
-- Xcode 15.0 ou superior
-- Claude Code instalado
+- 🍎 macOS 14.0+
+- 🛠️ Xcode 15.0+
+- 🤖 Claude Code installed and configured
 
-## Instalação
+## 🚀 Installation
 
-### Compilar do Código-Fonte
+### Build from Source
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
-cd /Users/joaoalves/Developer/usebar
+git clone https://github.com/joaoalvess/claude-usebar.git
+cd claude-usebar
 ```
 
-2. Abra o projeto no Xcode:
+2. Open the project in Xcode:
 ```bash
 open ClaudeUseBar/ClaudeUseBar.xcodeproj
 ```
 
-3. Compile e execute (⌘R)
+3. Build and run (`⌘R`) 🎉
 
-## Como Usar
+## 🎯 Usage
 
-### Primeira Configuração
+### First Setup
 
-1. Certifique-se de que o Claude Code está instalado e configurado
-2. Faça login no Claude Code com a conta desejada
-3. Abra o Claude UseBar
-4. Clique no ícone na status bar
-5. Clique em "Adicionar Conta"
-6. Clique em "Capturar Conta Atual"
+1. Make sure Claude Code is installed and configured
+2. Log in to Claude Code with the desired account
+3. Open Claude UseBar
+4. Click the icon in the status bar
+5. Click "Adicionar Conta" (Add Account)
+6. Click "Capturar Conta Atual" (Capture Current Account)
 
-### Adicionar Mais Contas
+### ➕ Adding More Accounts
 
-1. No Terminal, faça login no Claude Code com outra conta:
+1. In Terminal, log in to Claude Code with another account:
 ```bash
 claude logout
 claude login
 ```
 
-2. No Claude UseBar, clique em "Adicionar Conta"
-3. Clique em "Capturar Conta Atual"
+2. In Claude UseBar, click "Adicionar Conta" (Add Account)
+3. Click "Capturar Conta Atual" (Capture Current Account)
 
-### Trocar de Conta
+### 🔀 Switching Accounts
 
-1. Clique no ícone do Claude UseBar na status bar
-2. Selecione a conta desejada
-3. Clique em "Ativar"
-4. Reinicie o Claude Code
+1. Click the Claude UseBar icon in the status bar
+2. Select the desired account
+3. Click "Ativar" (Activate)
+4. Restart Claude Code
 
-**⚠️ IMPORTANTE**: Você deve reiniciar o Claude Code após trocar de conta para que as mudanças tenham efeito.
+> ⚠️ **IMPORTANT**: You must restart Claude Code after switching accounts for changes to take effect.
 
-## Arquitetura
+## 🏗️ Architecture
 
-### Estrutura de Pastas
+### 📁 Folder Structure
 
 ```
 ClaudeUseBar/
-├── App/                    # Entry point
-├── Models/                 # Estruturas de dados
+├── App/                    # Application entry point
+├── Models/                 # Data structures
 ├── Services/
-│   ├── Claude/            # Integração com Claude Code
-│   ├── Storage/           # Persistência local
-│   └── Network/           # Cliente HTTP API
-├── ViewModels/            # Lógica de negócio
-├── Views/                 # Interface SwiftUI
+│   ├── Claude/            # Claude Code integration
+│   ├── Storage/           # Local persistence
+│   └── Network/           # HTTP API client
+├── ViewModels/            # Business logic
+├── Views/                 # SwiftUI interface
 └── Utilities/             # Helpers
 ```
 
-### Componentes Principais
+### 🧩 Main Components
 
-#### Models
-- **Account**: Conta armazenada pelo app
-- **OAuthAccount**: Estrutura `.oauthAccount` do config Claude
-- **ClaudeCredentials**: Credenciais do Keychain
-- **UsageResponse**: Resposta da API de uso
-- **AccountUsage**: Estado combinado conta + dados de uso
+<details>
+<summary><strong>📦 Models</strong></summary>
 
-#### Services
-- **ClaudeInstall**: Resolve paths de instalação
-- **ClaudeConfigStore**: Lê/escreve `~/.claude.json`
-- **ClaudeKeychainStore**: Gerencia Keychain do Claude Code
-- **AppKeychainStore**: Keychain do próprio app
-- **AppAccountStore**: Persistência de contas em JSON
-- **AnthropicUsageClient**: Cliente HTTP para API de uso
-- **AccountSwitcher**: Troca de contas com rollback
+| Component | Description |
+|-----------|-------------|
+| `Account` | Account stored by the app |
+| `OAuthAccount` | Claude config's `.oauthAccount` structure |
+| `ClaudeCredentials` | OAuth credentials from Keychain |
+| `UsageResponse` | Usage API response |
+| `AccountUsage` | Combined account + usage state |
 
-#### ViewModels
-- **UsageViewModel**: Cache, polling e estado global
-- **AddAccountViewModel**: Fluxo de adicionar conta
+</details>
 
-#### Views
-- **ClaudeUseBarApp**: Entry point, MenuBarExtra
-- **MenuBarLabel**: Ícone e porcentagem na status bar
-- **PopoverContentView**: Container principal
-- **AccountRowView**: Linha por conta com progress bar
-- **UsageProgressView**: Barra de progresso colorida
-- **AddAccountView**: UI de adicionar conta
+<details>
+<summary><strong>⚙️ Services</strong></summary>
 
-## Fontes de Dados
+| Component | Description |
+|-----------|-------------|
+| `ClaudeInstall` | Resolves Claude installation paths |
+| `ClaudeConfigStore` | Reads/writes `~/.claude.json` |
+| `ClaudeKeychainStore` | Manages Claude Code Keychain |
+| `AppKeychainStore` | App's own Keychain |
+| `AppAccountStore` | JSON-based account persistence |
+| `AnthropicUsageClient` | HTTP client for usage API |
+| `AccountSwitcher` | Account switching with atomic rollback |
 
-### 1. Config Claude Code
-- **Path**: `~/.claude/.claude.json` (preferencial) ou `~/.claude.json`
-- **Campo usado**: `.oauthAccount`
+</details>
 
-### 2. Keychain
+<details>
+<summary><strong>🧠 ViewModels</strong></summary>
+
+| Component | Description |
+|-----------|-------------|
+| `UsageViewModel` | Caching, polling, and global state |
+| `AddAccountViewModel` | Add account flow |
+
+</details>
+
+<details>
+<summary><strong>🖼️ Views</strong></summary>
+
+| Component | Description |
+|-----------|-------------|
+| `ClaudeUseBarApp` | Entry point, MenuBarExtra |
+| `MenuBarLabel` | Icon and percentage in status bar |
+| `PopoverContentView` | Main popover container |
+| `AccountRowView` | Account row with progress bar |
+| `UsageProgressView` | Color-coded progress bar |
+| `AddAccountView` | Add account interface |
+
+</details>
+
+## 🔌 Data Sources
+
+### 1. 📄 Claude Code Config
+- **Path**: `~/.claude/.claude.json` (preferred) or `~/.claude.json`
+- **Field used**: `.oauthAccount`
+
+### 2. 🔑 Keychain
 - **Service**: `Claude Code-credentials`
-- **Account**: Nome de usuário do sistema
-- **Contém**: JSON com `claudeAiOauth.accessToken`
+- **Account**: System username
+- **Contains**: JSON with `claudeAiOauth.accessToken`
 
-### 3. API Anthropic
+### 3. 🌐 Anthropic API
 - **Endpoint**: `GET https://api.anthropic.com/api/oauth/usage`
 - **Headers**:
   - `Authorization: Bearer {accessToken}`
   - `anthropic-beta: oauth-2025-04-20`
 - **Response**: `five_hour.utilization`, `five_hour.resets_at`
 
-## Segurança
+## 🔐 Security
 
-### Rollback Automático
+### 🔄 Automatic Rollback
 
-O sistema de troca de contas implementa rollback automático:
+The account switching system implements automatic rollback:
 
-1. Backup do estado atual (config + Keychain)
-2. Aplica mudanças no Keychain
-3. Aplica mudanças no config
-4. Se step 3 falhar → rollback do Keychain
-5. Estado sempre consistente
+1. Backup current state (config + Keychain)
+2. Apply Keychain changes
+3. Apply config changes
+4. If step 3 fails → rollback Keychain
+5. State is always consistent ✅
 
-### Sandbox
+### 🛡️ Sandbox
 
-O app roda **sem sandbox** (necessário para acesso ao Keychain do Claude Code). Certifique-se de revisar o código antes de compilar.
+The app runs **without sandbox** (required for accessing Claude Code's Keychain). Make sure to review the source code before building.
 
-## Desenvolvimento
+## 🛠️ Development
 
-### Adicionar Novos Recursos
+### 🗺️ Roadmap
 
-1. **Notificações**: Alertar quando uso > 80%
-2. **Widgets**: Widget WidgetKit para macOS 14+
-3. **Shortcuts**: Integração com Shortcuts.app
-4. **WebSocket**: Updates em tempo real (se API suportar)
+- [ ] 🔔 Notifications when usage exceeds 80%
+- [ ] 📱 WidgetKit widget for macOS 14+
+- [ ] ⌨️ Shortcuts.app integration
+- [ ] ⚡ Real-time updates via WebSocket (when API supports it)
 
-### Debug
+### 🐛 Debug
 
-Para verificar se a troca de conta funcionou:
+To verify if the account switch worked:
 
 ```bash
-# Ver conta ativa
+# Check active account
 cat ~/.claude.json | grep emailAddress
 
-# Ver access token no Keychain
+# Check access token in Keychain
 security find-generic-password -s "Claude Code-credentials" -w | head -c 100
 ```
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
-### "Credenciais não encontradas"
-- Verifique se você está logado no Claude Code
-- Confirme que `~/.claude.json` existe
-- Execute `security find-generic-password -s "Claude Code-credentials"`
+| Error | Solution |
+|-------|----------|
+| "Credenciais não encontradas" | Make sure you're logged in to Claude Code and `~/.claude.json` exists |
+| "Token inválido ou expirado" | Run `claude logout` and `claude login` again, then recapture the account |
+| "Claude Code está em execução" | Close all Claude Code processes before switching (`pkill -f claude`) |
 
-### "Token inválido ou expirado"
-- Faça logout e login novamente no Claude Code
-- Remova e adicione a conta novamente no app
+## 🧰 Tech Stack
 
-### "Claude Code está em execução"
-- Feche todos os processos do Claude Code antes de trocar de conta
-- Execute `pkill -f claude` se necessário
+| Technology | Usage |
+|------------|-------|
+| Swift 5.9+ | Main language |
+| SwiftUI | User interface |
+| macOS Keychain | Secure credential storage |
+| URLSession | HTTP requests |
+| Anthropic OAuth API | Usage data |
 
-## Licença
+## 📄 License
 
-Copyright © 2026 João Alves. Todos os direitos reservados.
+Copyright © 2026 João Alves. All rights reserved.
 
-## Contribuindo
+## 🤝 Contributing
 
-Este é um projeto pessoal, mas sugestões são bem-vindas! Abra uma issue ou PR.
+Suggestions are welcome! Open an [issue](https://github.com/joaoalvess/claude-usebar/issues) or submit a PR.
